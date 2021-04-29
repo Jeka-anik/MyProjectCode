@@ -34,15 +34,15 @@
 
     - name: Pull default Docker image
       docker_image:
-        name: nginx
+        name: jekanik/projectfordiplom
         source: pull
 
     - name: Create default containers
       docker_container:
         name: myapp
-        image: nginx
+        image: jekanik/projectfordiplom
         ports:
           - "80:80"
         command: sleep 30m
         state: present
-      with_sequence: count=2
+      with_sequence: count=1
