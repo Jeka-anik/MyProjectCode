@@ -1,26 +1,5 @@
 ---
 # tasks file for deploy_nginx_web
-- block: # == for centos
-
-   - name: inst Nginx for CentOS
-     yum: name=nginx state=latest
-
-   - name: start service NGINX
-     ansible.builtin.service: name=nginx state=started enabled=yes
-
-   - ansible.posix.firewalld: # open http
-      service: http
-      permanent: yes
-      state: enabled
-
-   - name: restart nginx after firewall-cmd
-     ansible.builtin.service: name=nginx state=restarted
-
-   - name: Copy virtualhost config
-     template: src=default.conf dest=/etc/nginx/conf.d/{{ server_name }}.conf
-  
-  when: ansible_os_family=="RedHat"
-
 - block: #== for Ubuntu
 
    - name: inst Nginx for Ubuntu
