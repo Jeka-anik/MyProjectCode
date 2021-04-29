@@ -40,9 +40,9 @@
     - name: Create default containers
       docker_container:
         name: myapp
-        image: jekanik/projectfordiplom:latest
+        image: "jekanik/projectfordiplom:latest"
         ports:
           - "80:80"
-        command: sleep 1d
+        command: sleep 30m
         state: present
       with_sequence: count=2
