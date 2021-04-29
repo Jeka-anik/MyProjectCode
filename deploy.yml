@@ -32,17 +32,20 @@
       pip:
         name: docker
 
-    - name: Pull default Docker image
-      docker_image:
-        name: jekanik/myhello:tagname
-        source: pull
+#     - name: Pull default Docker image
+#       docker_image:
+#         name: jekanik/myhello:tagname
+#         source: pull
 
-    - name: Create default containers
+    - name:  Start container
       docker_container:
         name: myapp
-        image: jekanik/myhello:tagname
+        image: jekanik/projectfordiplom
+        state: started
+        pull: true
+        recreate: yes
+        hostname: "{{ ansible_hostname }}"
+        restart_policy: "always"
         ports:
           - "80:80"
-        command: sleep 30m
-        state: present
-      with_sequence: count=1
+
