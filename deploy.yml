@@ -40,7 +40,7 @@
     - name:  Start container
       docker_container:
         name: myapp
-        image: jekanik/projectfordiplom:41
+        image: jekanik/projectfordiplom:42
         state: started
         pull: true
         recreate: yes
@@ -55,4 +55,4 @@
     - name: Start a container
       docker_container:
         name: myapp
-        state: start
+        state: started
