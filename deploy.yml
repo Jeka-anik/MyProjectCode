@@ -40,7 +40,7 @@
     - name: Create default containers
       docker_container:
         name: myapp
-        image: "jekanik/projectfordiplom:latest"
+        image: nginx
         ports:
           - "80:80"
         command: sleep 30m
