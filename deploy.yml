@@ -36,7 +36,8 @@
 #       docker_image:
 #         name: jekanik/myhello:tagname
 #         source: pull
-
+    - debug: msg="{{ lookup('env','BUILD_ID') }}"
+    
     - name:  Start container
       docker_container:
         name: myapp
