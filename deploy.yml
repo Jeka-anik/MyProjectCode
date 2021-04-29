@@ -2,9 +2,9 @@
 - hosts: qa
   become: true
   vars:
-    create_containers: 2
-    default_container_name: docker
-    default_container_image: jekanik/projectfordiplom
+    create_containers: 1
+    default_container_name: test
+    default_container_image: jekanik/projectfordiplom:latest
     default_container_command: sleep 30m
 
   tasks:
