@@ -48,4 +48,11 @@
         restart_policy: "always"
         ports:
           - "80:80"
-
+    - name: Stop a container
+      docker_container:
+        name: myapp
+        state: stopped
+      - name: Start a container
+      docker_container:
+        name: myapp
+        state: start
