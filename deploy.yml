@@ -40,7 +40,7 @@
     - name:  Start container
       docker_container:
         name: myapp
-        image: jekanik/projectfordiplom:${BUILD_NUMBER}
+        image: jekanik/projectfordiplom
         state: started
         pull: true
         recreate: yes
