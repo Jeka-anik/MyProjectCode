@@ -4,7 +4,7 @@
   vars:
     create_containers: 2
     default_container_name: docker
-    default_container_image: jekanik/projectfordiplom:tagname
+    default_container_image: jekanik/projectfordiplom
     default_container_command: sleep 30m
 
   tasks:
