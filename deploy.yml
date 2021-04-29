@@ -34,13 +34,13 @@
 
     - name: Pull default Docker image
       docker_image:
-        name: jekanik/projectfordiplom
+        name: joomla
         source: pull
 
     - name: Create default containers
       docker_container:
         name: myapp
-        image: jekanik/projectfordiplom
+        image: joomla
         ports:
           - "80:80"
         command: sleep 30m
