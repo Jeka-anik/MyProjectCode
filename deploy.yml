@@ -52,7 +52,7 @@
       docker_container:
         name: myapp
         state: stopped
-      - name: Start a container
+    - name: Start a container
       docker_container:
         name: myapp
         state: start
