@@ -16,8 +16,5 @@
 - name: Create directory for virtualhost
   ansible.builtin.file: dest=/var/www/{{ server_name }}/html/ state=directory mode='0755'
 
-- name: Copy and generate index.html
-  template: src=index.j2 dest=/var/www/{{ server_name }}/html/index.html
   notify: 
     - restart nginx Ubuntu
-    - restart nginx Centos
