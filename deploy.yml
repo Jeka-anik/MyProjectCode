@@ -1,5 +1,5 @@
 ---
-- hosts: t3.micro
+- hosts: type_t3_micro
   become: true
   vars:
     create_containers: 1
