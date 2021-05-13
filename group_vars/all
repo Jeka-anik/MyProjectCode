@@ -1,1 +1,1 @@
-ansible-user : ubuntu
+ansible_user : ubuntu
