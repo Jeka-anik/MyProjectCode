@@ -8,6 +8,8 @@
     default_container_command: sleep 30m
 
   tasks:
+    - name: Unistall nginx
+      apt: name=nginx  state=absent
     - name: Install aptitude using apt
       apt: name=aptitude state=latest update_cache=yes force_apt_get=yes
 
