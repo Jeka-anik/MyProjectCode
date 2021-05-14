@@ -1,2 +1,2 @@
 ---
-ansible_private_key_file : /home/ubuntu/.ssh/hw41.pem
+ansible_private_key_file : ~/.ssh/hw41.pem
