@@ -1,5 +1,5 @@
 ---
-- hosts: type_t3_micro
+- hosts: tag_Owner_Anik
   become: true
   vars:
     create_containers: 1
