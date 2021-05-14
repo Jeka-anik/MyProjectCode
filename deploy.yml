@@ -50,7 +50,7 @@
         hostname: "{{ ansible_hostname }}"
         restart_policy: "always"
         ports:
-          - "8080:80"
+          - "80:80"
     - name: Stop a container
       docker_container:
         name: myapp
