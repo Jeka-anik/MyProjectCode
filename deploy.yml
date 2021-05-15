@@ -8,12 +8,6 @@
     default_container_command: sleep 30m
 
   tasks:
-    - name: stop nginx
-      service:
-          name: nginx
-          state: stopped
-    - name: ensure nginx is not installed
-      apt: name=nginx state=absent
     - name: Install aptitude using apt
       apt: name=aptitude state=latest update_cache=yes force_apt_get=yes
 
@@ -43,7 +37,12 @@
 #         name: jekanik/myhello:tagname
 #         source: pull
     - debug: msg="{{ lookup('env','BUILD_NUMBER') }}"
-    
+    - name: stop nginx
+      service:
+          name: nginx
+          state: stopped
+    - name: ensure nginx is not installed
+      apt: name=nginx state=absent   
     - name:  Start container
       docker_container:
         name: myapp
