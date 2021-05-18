@@ -1,7 +1,0 @@
----
-- name: Inst NGINX 
-  hosts: qa
-  become: yes
-    
-  roles:
-   - deploy_nginx_web
